@@ -8,6 +8,6 @@
 <body>
     Hello, this is a test document to check the recent edits in the code
     <p>Digimon Name: {{.Name}}</p>
-    <p>Digimon Image: <img src="{{.Images.Href}}" alt="{{.Name}}"></p>
+    <p>Digimon Image: {{if .Images}}<img src="{{(index .Images 0).Href}}" alt="{{.Name}}">{{else}}No image available{{end}}</p>
 </body>
 </html>
