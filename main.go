@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"os"
-
-	"github.com/joho/godotenv"
 
 	"github.com/sangnt1552314/digimon-godesk/internal/utils"
 )
@@ -17,16 +14,10 @@ func main() {
 		panic(err)
 	}
 
-	// Load environment variables
-	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found")
-	}
-
-	port := ":3000"
-	if p := os.Getenv("PORT"); p != "" {
-		port = ":" + p
-	} else {
-		log.Println("Using default port 3000")
+	// Load configuration
+	config, err := utils.LoadConfig()
+	if err != nil {
+		log.Fatalf("Failed to load configuration: %v", err)
 	}
 
 	router := http.NewServeMux()
@@ -40,11 +31,11 @@ func main() {
 	})
 
 	server := &http.Server{
-		Addr:    port,
+		Addr:    config.Port,
 		Handler: router,
 	}
 
-	log.Printf("Starting server on port %s", port)
+	log.Printf("Starting server on port %s", config.Port)
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}

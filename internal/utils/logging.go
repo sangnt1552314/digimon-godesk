@@ -6,7 +6,6 @@ import (
 	"os"
 )
 
-// SetupLogging initializes logging with a file in storage/logs directory
 func SetupLogging() error {
 	// Create logs directory if it doesn't exist
 	if err := os.MkdirAll("storage/logs", 0755); err != nil {
