@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/sangnt1552314/digimon-godesk/internal/services/handlers/api"
+	"github.com/sangnt1552314/digimon-godesk/internal/services/handlers/web"
 )
 
 func (s *Server) RegisterRoutes() http.Handler {
@@ -13,7 +14,10 @@ func (s *Server) RegisterRoutes() http.Handler {
 	mux.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
 	// API routes
-	mux.HandleFunc("/health", api.HealthCheckHandler)
+	mux.HandleFunc("GET /health", api.HealthCheckHandler)
+
+	// Web routes
+	mux.HandleFunc("/", web.IndexHandler)
 
 	return mux
 }
