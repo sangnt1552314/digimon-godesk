@@ -35,9 +35,13 @@ func main() {
 		log.Println("Using default port 3000")
 	}
 
+	//Handles static files
+	http.Handle("/assests/", http.StripPrefix("/assests/", http.FileServer(http.Dir("assests"))))
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, World! Digimon GoDesk is running!")
 	})
 
+	log.Printf("Starting server on port %s", port)
 	log.Fatal(http.ListenAndServe(port, nil))
 }
