@@ -7,25 +7,19 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+
+	"github.com/sangnt1552314/digimon-godesk/internal/utils"
 )
 
 func main() {
 	// Setup logging
-	if errLog := os.MkdirAll("storage/logs", 0755); errLog != nil {
-		panic(fmt.Errorf("failed to create logs directory: %w", errLog))
+	if err := utils.SetupLogging(); err != nil {
+		panic(err)
 	}
 
-	logFile, errLogFile := os.OpenFile("storage/logs/develop.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	if errLogFile != nil {
-		panic(errLogFile)
-	}
-	defer logFile.Close()
-	log.SetOutput(logFile)
-
-	//Setup environment variables
-	err := godotenv.Load("./.env")
-	if err != nil {
-		log.Fatalf("Error loading .env file")
+	// Load environment variables
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found")
 	}
 
 	port := ":3000"
@@ -35,13 +29,23 @@ func main() {
 		log.Println("Using default port 3000")
 	}
 
-	//Handles static files
-	http.Handle("/assests/", http.StripPrefix("/assests/", http.FileServer(http.Dir("assests"))))
+	router := http.NewServeMux()
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, World! Digimon GoDesk is running!")
+	//Handles static files
+	router.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+
+	router.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		fmt.Fprintln(w, "OK")
 	})
 
+	server := &http.Server{
+		Addr:    port,
+		Handler: router,
+	}
+
 	log.Printf("Starting server on port %s", port)
-	log.Fatal(http.ListenAndServe(port, nil))
+	if err := server.ListenAndServe(); err != nil {
+		log.Fatalf("Failed to start server: %v", err)
+	}
 }

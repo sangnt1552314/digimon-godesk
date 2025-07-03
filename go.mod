@@ -1,4 +1,4 @@
-module digimon-godesk
+module github.com/sangnt1552314/digimon-godesk
 
 go 1.23
 
