@@ -30,7 +30,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Fetch digimon data
-	digimon, err := getDigimonByName("agumon") // Example name, can be replaced with a dynamic value
+	digimon, err := getDigimonByName("greymon") // Example name, can be replaced with a dynamic value
 	if err != nil {
 		http.Error(w, "Failed to fetch digimon", http.StatusInternalServerError)
 		return

@@ -4,7 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/sangnt1552314/digimon-godesk/internal/utils"
+	"github.com/sangnt1552314/digimon-godesk/internal/config"
+	"github.com/sangnt1552314/digimon-godesk/internal/logger"
 )
 
 type Server struct {
@@ -13,12 +14,12 @@ type Server struct {
 
 func NewServer() *http.Server {
 	// Setup logging
-	if err := utils.SetupLogging(); err != nil {
+	if err := logger.SetupLogging(); err != nil {
 		panic(err)
 	}
 
 	// Load configuration
-	config, err := utils.LoadConfig()
+	config, err := config.LoadConfig()
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}

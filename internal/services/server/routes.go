@@ -3,8 +3,8 @@ package server
 import (
 	"net/http"
 
-	"github.com/sangnt1552314/digimon-godesk/internal/services/handlers/api"
-	"github.com/sangnt1552314/digimon-godesk/internal/services/handlers/web"
+	"github.com/sangnt1552314/digimon-godesk/internal/handler/api"
+	"github.com/sangnt1552314/digimon-godesk/internal/handler/web"
 )
 
 func (s *Server) RegisterRoutes() http.Handler {
