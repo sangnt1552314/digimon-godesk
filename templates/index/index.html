@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Digimon Godesk</h1>
-    <div class="grid-container">
+    <div class="grid-container" id="digimon-grid">
         <article class="digimon-article">
             <div class="card">
                 {{if .Images}}
@@ -83,8 +83,8 @@
                     <h4><b>Search Digimon</b></h4>
                     <form 
                     hx-post="/digimon"
-                    hx-swap="outerHTML"
-                    hx-target="#targetDiv"
+                    hx-swap="afterbegin"
+                    hx-target="#digimon-grid"
                     id="digimon-search-form" class="search-form">
                         <div class="form-group">
                             <label for="name">Name:</label>

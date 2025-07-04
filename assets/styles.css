@@ -13,9 +13,10 @@
 /* Article styling */
 .digimon-article {
     margin: 0;
-    flex: 1;
-    min-width: 300px;
+    flex: 0 0 auto;
+    min-width: 400px;
     max-width: 500px;
+    width: 450px;
 }
 
 .form-article {
@@ -41,7 +42,7 @@
 /* Digimon card layout: image left, info right */
 .digimon-article .card {
     flex-direction: row;
-    min-height: 250px;
+    min-height: 320px;
     height: auto;
 }
 
@@ -54,7 +55,7 @@
 /* Digimon image styling */
 .digimon-image {
     width: 200px;
-    height: 250px;
+    height: 320px;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -65,7 +66,7 @@
 /* No image placeholder */
 .no-image {
     width: 200px;
-    height: 250px;
+    height: 320px;
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
@@ -215,13 +216,14 @@ p {
     .form-article {
         flex: none;
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
     }
     
     /* Stack image and info vertically on mobile */
     .digimon-article .card {
         flex-direction: column;
         min-height: 400px;
+        height: auto;
     }
     
     .digimon-image,
@@ -238,15 +240,20 @@ p {
     }
     
     .digimon-article {
-        min-width: 280px;
-        max-width: 450px;
+        min-width: 350px;
+        max-width: 400px;
+        width: 380px;
     }
     
     /* Adjust image size for tablet */
     .digimon-image,
     .no-image {
         width: 150px;
-        height: 200px;
+        height: auto;
+    }
+    
+    .digimon-article .card {
+        height: auto;
     }
 }
 
