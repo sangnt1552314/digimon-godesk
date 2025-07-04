@@ -19,12 +19,6 @@
     width: 450px;
 }
 
-.form-article {
-    margin: 0;
-    flex: 0 0 300px;
-    min-width: 300px;
-}
-
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -98,7 +92,7 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    margin: 20px 0;
+    margin: 20px 0 30px 0;
 }
 
 h4 {
@@ -145,11 +139,53 @@ p {
     font-size: 11px;
 }
 
-/* Form styling */
+/* Form styling - now standalone at top */
 .form-article {
-    margin: 0;
-    flex: 0 0 300px;
-    min-width: 300px;
+    margin: 0 auto 30px auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.form-article .card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    min-height: auto;
+}
+
+.form-article .card h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-article .container {
+    padding: 24px;
+}
+
+#form-container {
+    margin-bottom: 20px;
+}
+
+/* Form results container styling - horizontal layout */
+#form-container .grid-container {
+    margin-top: 0;
+    padding-top: 0;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#form-container .digimon-article {
+    margin-bottom: 0;
+    flex: 0 0 auto;
 }
 
 .search-form {
@@ -162,41 +198,54 @@ p {
 
 .form-group label {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-weight: 600;
-    color: #333;
+    color: white;
     font-size: 14px;
 }
 
 .form-group input[type="text"] {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
     font-size: 14px;
     box-sizing: border-box;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.7);
 }
 
 .form-group input[type="text"]:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    border-color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
 }
 
 .search-button {
-    background-color: #007bff;
+    background: rgba(255,255,255,0.2);
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+    padding: 12px 24px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
     font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
     width: 100%;
+    margin-top: 8px;
 }
 
 .search-button:hover {
-    background-color: #0056b3;
+    background: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .search-button:active {
@@ -212,11 +261,29 @@ p {
         padding: 15px;
     }
     
-    .digimon-article,
-    .form-article {
+    /* Keep form results horizontal even on mobile */
+    #form-container .grid-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .digimon-article {
         flex: none;
         width: 100%;
         max-width: 450px;
+    }
+    
+    /* Form results should maintain smaller width on mobile */
+    #form-container .digimon-article {
+        width: 300px;
+        min-width: 280px;
+        max-width: 320px;
+    }
+    
+    .form-article {
+        padding: 0 15px;
+        margin-bottom: 20px;
     }
     
     /* Stack image and info vertically on mobile */
@@ -226,10 +293,23 @@ p {
         height: auto;
     }
     
+    /* Form results keep horizontal layout */
+    #form-container .digimon-article .card {
+        flex-direction: row;
+        min-height: 250px;
+    }
+    
     .digimon-image,
     .no-image {
         width: 100%;
         height: 200px;
+    }
+    
+    /* Form results have smaller images */
+    #form-container .digimon-image,
+    #form-container .no-image {
+        width: 120px;
+        height: 180px;
     }
 }
 
@@ -239,16 +319,39 @@ p {
         padding: 15px;
     }
     
+    /* Ensure form results stay horizontal on tablet */
+    #form-container .grid-container {
+        flex-direction: row;
+    }
+    
     .digimon-article {
         min-width: 350px;
         max-width: 400px;
         width: 380px;
     }
     
+    /* Form results maintain horizontal layout */
+    #form-container .digimon-article {
+        min-width: 320px;
+        max-width: 360px;
+        width: 340px;
+    }
+    
+    .form-article {
+        max-width: 450px;
+        padding: 0 15px;
+    }
+    
     /* Adjust image size for tablet */
     .digimon-image,
     .no-image {
         width: 150px;
+        height: auto;
+    }
+    
+    #form-container .digimon-image,
+    #form-container .no-image {
+        width: 130px;
         height: auto;
     }
     
