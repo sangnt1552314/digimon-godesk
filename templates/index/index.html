@@ -75,6 +75,26 @@
             </div>
         </article>
         <!-- Add more articles here for multiple Digimon -->
+
+        <article class="form-article">
+            <div class="card" id="targetDiv">
+                <div class="container">
+                    <h4><b>Search Digimon</b></h4>
+                    <form 
+                    hx-post="/digimon"
+                    hx-swap="outerHTML"
+                    hx-target="#targetDiv"
+                    id="digimon-search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter Digimon name">
+                        </div>
+                        
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </article>
     </div>
 </body>
 </html>
