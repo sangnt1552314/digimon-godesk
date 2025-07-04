@@ -1,22 +1,22 @@
-/* Horizontal container for articles */
+/* Horizontal container for articles - 3 column layout */
 .grid-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-/* Article styling */
+/* Article styling - optimized for 3 columns */
 .digimon-article {
     margin: 0;
     flex: 0 0 auto;
-    min-width: 400px;
-    max-width: 500px;
-    width: 450px;
+    min-width: 380px;
+    max-width: 420px;
+    width: calc(33.333% - 14px);
 }
 
 .card {
@@ -368,5 +368,12 @@ p {
     .grid-container {
         gap: 25px;
         padding: 25px;
+        max-width: 1500px;
+    }
+    
+    .digimon-article {
+        width: calc(33.333% - 17px);
+        min-width: 400px;
+        max-width: 450px;
     }
 }
