@@ -1,18 +1,11 @@
 package web
 
 import (
-	"encoding/json"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
-	"net/url"
 
-	"github.com/sangnt1552314/digimon-godesk/internal/models"
-)
-
-const (
-	baseURL = "http://digi-api.com/api/v1/digimon"
+	"github.com/sangnt1552314/digimon-godesk/internal/services"
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -30,7 +23,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Fetch digimon data
-	digimon, err := getDigimonByName("greymon") // Example name, can be replaced with a dynamic value
+	digimon, err := services.GetDigimonByName("agumon")
 	if err != nil {
 		http.Error(w, "Failed to fetch digimon", http.StatusInternalServerError)
 		return
@@ -41,25 +34,4 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Template execution error: %v", err)
 		return
 	}
-}
-
-func getDigimonByName(name string) (*models.DigimonDetail, error) {
-	url := fmt.Sprintf("%s/%s", baseURL, url.QueryEscape(name))
-
-	resp, err := http.Get(url)
-	if err != nil {
-		return nil, fmt.Errorf("failed to fetch digimon by name: %v", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("API returned non-200 status code: %d", resp.StatusCode)
-	}
-
-	var digimon models.DigimonDetail
-	if err := json.NewDecoder(resp.Body).Decode(&digimon); err != nil {
-		return nil, fmt.Errorf("failed to decode response: %v", err)
-	}
-
-	return &digimon, nil
 }
