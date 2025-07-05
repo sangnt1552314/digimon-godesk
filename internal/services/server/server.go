@@ -9,30 +9,30 @@ import (
 )
 
 type Server struct {
-	Port string
+	Config *config.Config
 }
 
 func NewServer() *http.Server {
-	// Setup logging
-	if err := logger.SetupLogging(); err != nil {
-		panic(err)
-	}
-
-	// Load configuration
-	config, err := config.LoadConfig()
+	// Load configuration first
+	cfg, err := config.LoadConfig()
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}
 
+	// Setup logging with configuration
+	if err := logger.SetupLogging(cfg); err != nil {
+		panic(err)
+	}
+
 	// Create a new server instance with the loaded configuration
 	NewServer := &Server{
-		Port: config.Port,
+		Config: cfg,
 	}
 
 	// Create a new HTTP server
-	log.Printf("Starting server on port %s", NewServer.Port)
+	log.Printf("Starting server on port %s in %s environment", cfg.Port, cfg.Environment)
 	server := &http.Server{
-		Addr:    NewServer.Port,
+		Addr:    cfg.Port,
 		Handler: NewServer.RegisterRoutes(),
 	}
 

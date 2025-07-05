@@ -1,21 +1,26 @@
-version: '3'
+version: '3.8'
+
+# Default docker-compose file (development)
+# Use docker-compose.dev.yml for explicit development
+# Use docker-compose.prod.yml for production
 
 services:
   app:
-    container_name: app
+    container_name: digimon-godesk
     build:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    tty: true
     env_file:
       - .env
     volumes:
       - .:/app
     ports:
-      - "${PORT:-8080}:${PORT:-8080}"
+      - "${PORT:-3000}:${PORT:-3000}"
     networks:
       - dgd-network
+    environment:
+      - APP_ENV=${APP_ENV:-development}
 
 networks:
   dgd-network:

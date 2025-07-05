@@ -90,7 +90,7 @@
             <div class="card" {{if .Images}}style="background-image: url('{{(index .Images 0).Href}}');"{{else}}style="background-color: #f0f0f0;"{{end}}>
                 <div class="card-overlay">
                     <div class="container">
-                        <h4><b>{{.Name}}</b></h4>
+                        <h4><b><a href="/digimon/{{.ID}}" class="digimon-name-link">{{.Name}}</a></b></h4>
                         
                         {{if .Levels}}
                         <div class="info-section">

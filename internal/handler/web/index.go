@@ -78,3 +78,39 @@ func AddDigimonHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
+func GetDigimonHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	id := strings.TrimPrefix(r.URL.Path, "/digimon/")
+	if id == "" {
+		http.Error(w, "Digimon ID is required", http.StatusBadRequest)
+		return
+	}
+
+	digimon, err := services.GetDigimonByName(id)
+	if err != nil {
+		http.Error(w, "Failed to fetch digimon", http.StatusInternalServerError)
+		return
+	}
+	if digimon == nil {
+		http.Error(w, "Digimon not found", http.StatusNotFound)
+		return
+	}
+
+	tmplPath := "templates/digimon/detail.html"
+	tmpl, err := template.ParseFiles(tmplPath)
+	if err != nil {
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+
+	if err := tmpl.Execute(w, digimon); err != nil {
+		log.Printf("Template execution error: %v", err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+}

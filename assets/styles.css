@@ -230,6 +230,16 @@ p {
     flex: 0 0 auto;
 }
 
+.digimon-name-link {
+    color: white;
+    text-decoration: none;
+}
+
+.digimon-name-link:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+}
+
 .search-form {
     margin: 0;
 }

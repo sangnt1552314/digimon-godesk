@@ -24,8 +24,14 @@ profile.cov
 go.work
 go.work.sum
 
-# env file
+# Environment files (keep examples)
 .env
+.env.local
+# Include environment examples
+!.env.example
+!.env.development
+!.env.production
+!.env.testing
 
 # Editor/IDE
 .idea/
@@ -37,6 +43,19 @@ go.work.sum
 
 # Logs
 *.log
+storage/logs/*.log
 
 # Air hot reload
 tmp/
+
+# Docker volumes
+docker-volumes/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

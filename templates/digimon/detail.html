@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}} - Digimon Details</title>
+    <link rel="stylesheet" href="/assets/detail.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="nav-back">Home</a>
+            <h1>{{.Name}}</h1>
+            <p class="subtitle">Digital Monster Profile</p>
+        </div>
+        
+        <div class="main-content">
+            <!-- Digimon Profile Section -->
+            <div class="digimon-profile">
+                <div class="digimon-image">
+                    {{if .Images}}
+                        {{range .Images}}
+                            {{if .Transparent}}
+                                <img src="{{.Href}}" alt="{{$.Name}}" loading="lazy">
+                                {{break}}
+                            {{end}}
+                        {{end}}
+                        {{if not (index .Images 0).Transparent}}
+                            <img src="{{(index .Images 0).Href}}" alt="{{.Name}}" loading="lazy">
+                        {{end}}
+                    {{else}}
+                        <div style="width: 200px; height: 200px; background: #f0f0f0; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #666;">
+                            No Image Available
+                        </div>
+                    {{end}}
+                </div>
+                
+                <div class="digimon-info">
+                    <div class="info-card">
+                        <h3>Basic Information</h3>
+                        <p><strong>ID:</strong> #{{.ID}}</p>
+                        <p><strong>Name:</strong> {{.Name}}</p>
+                        {{if .ReleaseDate}}
+                            <p class="release-date"><strong>Release Date:</strong> {{.ReleaseDate}}</p>
+                        {{end}}
+                        {{if .XAntibody}}
+                            <span class="x-antibody">X-Antibody</span>
+                        {{end}}
+                    </div>
+                    
+                    {{if .Levels}}
+                    <div class="info-card">
+                        <h3>Levels</h3>
+                        {{range .Levels}}
+                            <span class="badge badge-level">{{.Level}}</span>
+                        {{end}}
+                    </div>
+                    {{end}}
+                    
+                    {{if .Types}}
+                    <div class="info-card">
+                        <h3>Types</h3>
+                        {{range .Types}}
+                            <span class="badge badge-type">{{.Type}}</span>
+                        {{end}}
+                    </div>
+                    {{end}}
+                    
+                    {{if .Attributes}}
+                    <div class="info-card">
+                        <h3>Attributes</h3>
+                        {{range .Attributes}}
+                            <span class="badge badge-attribute">{{.Attribute}}</span>
+                        {{end}}
+                    </div>
+                    {{end}}
+                    
+                    {{if .Fields}}
+                    <div class="info-card">
+                        <h3>Fields</h3>
+                        {{range .Fields}}
+                            <span class="badge badge-field">{{.Field}}</span>
+                        {{end}}
+                    </div>
+                    {{end}}
+                </div>
+            </div>
+            
+            <!-- Descriptions Section -->
+            {{if .Descriptions}}
+            <div class="section">
+                <h2>Descriptions</h2>
+                {{range .Descriptions}}
+                    <div class="description-card">
+                        <span class="origin">{{.Origin}} ({{.Language}})</span>
+                        <p>{{.Description}}</p>
+                    </div>
+                {{end}}
+            </div>
+            {{end}}
+            
+            <!-- Skills Section -->
+            {{if .Skills}}
+            <div class="section">
+                <h2>Skills & Abilities</h2>
+                <div class="skills-grid">
+                    {{range .Skills}}
+                        <div class="skill-card">
+                            <h4>{{.Skill}}</h4>
+                            {{if .Translation}}
+                                <p class="translation">{{.Translation}}</p>
+                            {{end}}
+                            {{if .Description}}
+                                <p>{{.Description}}</p>
+                            {{end}}
+                        </div>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+            
+            <!-- Prior Evolutions Section -->
+            {{if .PriorEvolutions}}
+            <div class="section">
+                <h2>Prior Evolutions</h2>
+                <div class="evolution-grid">
+                    {{range .PriorEvolutions}}
+                        <a href="/digimon/{{.Digimon}}" class="evolution-card">
+                            {{if .Image}}
+                                <img src="{{.Image}}" alt="{{.Digimon}}" loading="lazy">
+                            {{end}}
+                            <h4>{{.Digimon}}</h4>
+                            {{if .Condition}}
+                                <p class="condition">{{.Condition}}</p>
+                            {{end}}
+                        </a>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+            
+            <!-- Next Evolutions Section -->
+            {{if .NextEvolutions}}
+            <div class="section">
+                <h2>Next Evolutions</h2>
+                <div class="evolution-grid">
+                    {{range .NextEvolutions}}
+                        <a href="/digimon/{{.Digimon}}" class="evolution-card">
+                            {{if .Image}}
+                                <img src="{{.Image}}" alt="{{.Digimon}}" loading="lazy">
+                            {{end}}
+                            <h4>{{.Digimon}}</h4>
+                            {{if .Condition}}
+                                <p class="condition">{{.Condition}}</p>
+                            {{end}}
+                        </a>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>

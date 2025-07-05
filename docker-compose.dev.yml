@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app-dev:
+    container_name: digimon-godesk-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    env_file:
+      - .env.development
+    volumes:
+      - .:/app
+      - /app/tmp  # Exclude tmp directory from volume mount
+    ports:
+      - "3000:3000"
+    networks:
+      - dgd-dev-network
+    environment:
+      - APP_ENV=development
+      - GO_ENV=development
+
+networks:
+  dgd-dev-network:
+    driver: bridge
