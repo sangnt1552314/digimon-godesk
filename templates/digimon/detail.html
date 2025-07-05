@@ -21,12 +21,12 @@
                     {{if .Images}}
                         {{range .Images}}
                             {{if .Transparent}}
-                                <img src="{{.Href}}" alt="{{$.Name}}" loading="lazy">
+                                <img src="{{.Href}}" alt="{{$.Name}}" loading="lazy" class="clickable-image" onclick="openModal('{{.Href}}', '{{$.Name}}')">
                                 {{break}}
                             {{end}}
                         {{end}}
                         {{if not (index .Images 0).Transparent}}
-                            <img src="{{(index .Images 0).Href}}" alt="{{.Name}}" loading="lazy">
+                            <img src="{{(index .Images 0).Href}}" alt="{{.Name}}" loading="lazy" class="clickable-image" onclick="openModal('{{(index .Images 0).Href}}', '{{.Name}}')">
                         {{end}}
                     {{else}}
                         <div style="width: 200px; height: 200px; background: #f0f0f0; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #666;">
@@ -160,5 +160,46 @@
             {{end}}
         </div>
     </div>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption">
+                <span id="modalCaption"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(imageSrc, imageName) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImage.src = imageSrc;
+            modalCaption.textContent = imageName;
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
