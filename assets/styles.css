@@ -33,11 +33,61 @@
     height: 100%;
 }
 
-/* Digimon card layout: image left, info right */
+/* Digimon card layout: background image with overlay */
 .digimon-article .card {
-    flex-direction: row;
+    flex-direction: column;
     min-height: 320px;
     height: auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Overlay for better text readability */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0.3) 0%, 
+        rgba(0,0,0,0.4) 40%, 
+        rgba(0,0,0,0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Adjust container for overlay layout */
+.card-overlay .container {
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Update text colors for better visibility on background */
+.card-overlay h4 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.card-overlay .info-section {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    margin: 6px 0;
+}
+
+.card-overlay .info-section strong {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -46,31 +96,15 @@
     transform: translateY(-2px);
 }
 
-/* Digimon image styling */
-.digimon-image {
-    width: 200px;
-    height: 320px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    flex-shrink: 0;
-    border-radius: 0;
-}
-
-/* No image placeholder */
-.no-image {
-    width: 200px;
-    height: 320px;
+/* No image placeholder - now for background fallback */
+.no-image-background {
     background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-style: italic;
-    flex-shrink: 0;
-    border-radius: 0;
-    font-size: 14px;
-    text-align: center;
+    background-image: linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
+                      linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+                      linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
 /* Add some padding inside the card container */
@@ -79,6 +113,14 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+/* Override for overlay containers */
+.card-overlay .container {
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    flex: none;
 }
 
 /* Additional styling for better layout */

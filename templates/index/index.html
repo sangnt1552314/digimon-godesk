@@ -87,67 +87,64 @@
     <div id="form-container">
         <div class="grid-container" id="digimon-grid">
             <article class="digimon-article">
-            <div class="card">
-                {{if .Images}}
-                    <img src="{{(index .Images 0).Href}}" alt="{{.Name}}" class="digimon-image">
-                {{else}}
-                    <div class="no-image">No image available</div>
-                {{end}}
-                <div class="container">
-                    <h4><b>{{.Name}}</b></h4>
-                    
-                    {{if .Levels}}
-                    <div class="info-section">
-                        <strong>Level:</strong>
-                        {{range $index, $level := .Levels}}
-                            {{if $index}}, {{end}}{{$level.Level}}
-                        {{end}}
-                    </div>
-                    {{end}}
-                    
-                    {{if .Types}}
-                    <div class="info-section">
-                        <strong>Type:</strong>
-                        {{range $index, $type := .Types}}
-                            {{if $index}}, {{end}}{{$type.Type}}
-                        {{end}}
-                    </div>
-                    {{end}}
-                    
-                    {{if .Attributes}}
-                    <div class="info-section">
-                        <strong>Attribute:</strong>
-                        {{range $index, $attr := .Attributes}}
-                            {{if $index}}, {{end}}{{$attr.Attribute}}
-                        {{end}}
-                    </div>
-                    {{end}}
-                    
-                    <!-- {{if .Descriptions}}
-                    <div class="info-section">
-                        <strong>Description:</strong>
-                        {{range .Descriptions}}
-                            {{if eq .Language "en_us"}}
-                                <p class="description">{{.Description}}</p>
+            <div class="card" {{if .Images}}style="background-image: url('{{(index .Images 0).Href}}');"{{else}}style="background-color: #f0f0f0;"{{end}}>
+                <div class="card-overlay">
+                    <div class="container">
+                        <h4><b>{{.Name}}</b></h4>
+                        
+                        {{if .Levels}}
+                        <div class="info-section">
+                            <strong>Level:</strong>
+                            {{range $index, $level := .Levels}}
+                                {{if $index}}, {{end}}{{$level.Level}}
                             {{end}}
+                        </div>
                         {{end}}
-                    </div>
-                    {{end}} -->
-                    
-                    <!-- {{if .Skills}}
-                    <div class="info-section">
-                        <strong>Skills:</strong>
-                        <ul class="skills-list">
-                            {{range .Skills}}
-                                <li>
-                                    <strong>{{.Skill}}</strong>
-                                    {{if .Translation}} ({{.Translation}}){{end}}
-                                    {{if .Description}}<br><small>{{.Description}}</small>{{end}}
-                                </li>
+                        
+                        {{if .Types}}
+                        <div class="info-section">
+                            <strong>Type:</strong>
+                            {{range $index, $type := .Types}}
+                                {{if $index}}, {{end}}{{$type.Type}}
                             {{end}}
-                        </ul>
+                        </div>
+                        {{end}}
+                        
+                        {{if .Attributes}}
+                        <div class="info-section">
+                            <strong>Attribute:</strong>
+                            {{range $index, $attr := .Attributes}}
+                                {{if $index}}, {{end}}{{$attr.Attribute}}
+                            {{end}}
+                        </div>
+                        {{end}}
+                        
+                        <!-- {{if .Descriptions}}
+                        <div class="info-section">
+                            <strong>Description:</strong>
+                            {{range .Descriptions}}
+                                {{if eq .Language "en_us"}}
+                                    <p class="description">{{.Description}}</p>
+                                {{end}}
+                            {{end}}
+                        </div>
+                        {{end}} -->
+                        
+                        <!-- {{if .Skills}}
+                        <div class="info-section">
+                            <strong>Skills:</strong>
+                            <ul class="skills-list">
+                                {{range .Skills}}
+                                    <li>
+                                        <strong>{{.Skill}}</strong>
+                                        {{if .Translation}} ({{.Translation}}){{end}}
+                                        {{if .Description}}<br><small>{{.Description}}</small>{{end}}
+                                    </li>
+                                {{end}}
+                            </ul>
+                        </div>
+                        {{end}} -->
                     </div>
-                    {{end}} -->
                 </div>
             </div>
         </article>
