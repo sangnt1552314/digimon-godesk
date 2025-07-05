@@ -19,6 +19,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 	// Web routes
 	mux.HandleFunc("/", web.IndexHandler)
 	mux.HandleFunc("POST /digimon", web.AddDigimonHandler)
+	mux.HandleFunc("GET /digimon/{id}", web.GetDigimonHandler)
 
 	return mux
 }
