@@ -10,59 +10,6 @@
 <body>
     <h1>Digimon Godesk <span class="header-credit">by Your Name</span></h1>
     
-    <!-- Credits button -->
-    <div class="credits-button-container">
-        <button class="credits-button" onclick="toggleCreditsModal()">ℹ️ About & Credits</button>
-    </div>
-    
-    <!-- Credits Modal -->
-    <div id="creditsModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="toggleCreditsModal()">&times;</span>
-            <h2>About Digimon Godesk</h2>
-            <div class="credits-content">
-                <h3>🚀 Technology Stack</h3>
-                <ul>
-                    <li><strong>Backend:</strong> Go (Golang)</li>
-                    <li><strong>Frontend:</strong> HTML, CSS, HTMX</li>
-                    <li><strong>API:</strong> <a href="https://digimon-api.vercel.app/" target="_blank">Digimon API</a></li>
-                    <li><strong>Deployment:</strong> Docker</li>
-                </ul>
-                
-                <h3>👨‍💻 Developer</h3>
-                <p>Built with ❤️ by <strong>SangNT</strong></p>
-                <p>Connect with me:</p>
-                <div class="social-links">
-                    <a href="https://github.com/sangnt1552314" target="_blank">GitHub</a>
-                    <a href="mailto:sang1552314@gmail.com">Email</a>
-                </div>
-                
-                <h3>🙏 Acknowledgments</h3>
-                <p>Special thanks to:</p>
-                <ul>
-                    <li>The Digimon API team for providing the data</li>
-                    <li>The Go community for amazing tools</li>
-                    <li>HTMX for making dynamic web apps simple</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function toggleCreditsModal() {
-            const modal = document.getElementById('creditsModal');
-            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-        }
-        
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('creditsModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
-    
     <!-- Search Form at the top -->
     <article class="form-article">
         <div class="card" id="targetDiv">
