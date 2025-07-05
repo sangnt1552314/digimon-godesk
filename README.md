@@ -69,6 +69,102 @@ go run cmd/main.go
 docker-compose up --build
 ```
 
+## 🌍 Environment Management
+
+This project supports multiple environments with different configurations:
+
+### Available Environments
+
+- **Development** (`development`): Hot reloading, debug logging, detailed error messages
+- **Production** (`production`): Optimized build, minimal logging, security hardened
+- **Testing** (`testing`): Test-specific configuration, isolated logging
+
+### Quick Start with Make
+
+The easiest way to run the application in different environments:
+
+```bash
+# Development environment (with hot reloading)
+make dev
+
+# Production environment
+make prod
+
+# Run tests
+make test
+
+# Build locally
+make build
+
+# Run locally without Docker
+make run-local
+
+# View logs
+make logs-dev    # Development logs
+make logs-prod   # Production logs
+
+# Clean up
+make clean
+```
+
+### Environment Configuration Files
+
+- `.env.development` - Development settings
+- `.env.production` - Production settings  
+- `.env.testing` - Testing settings
+- `.env.example` - Template for creating your own `.env` file
+
+### Manual Environment Setup
+
+#### Development Environment
+
+```bash
+# Copy development configuration
+cp .env.development .env
+
+# Run with Docker
+docker-compose -f docker-compose.dev.yml up --build
+
+# Or run locally
+APP_ENV=development go run ./cmd/main.go
+```
+
+#### Production Environment
+
+```bash
+# Copy production configuration
+cp .env.production .env
+
+# Run with Docker
+docker-compose -f docker-compose.prod.yml up --build
+
+# Or build and run locally
+APP_ENV=production go build -o main ./cmd/main.go
+./main
+```
+
+### Environment Variables
+
+| Variable | Development | Production | Testing | Description |
+|----------|-------------|------------|---------|-------------|
+| `APP_ENV` | development | production | testing | Application environment |
+| `PORT` | 3000 | 8080 | 3001 | Server port |
+| `DEBUG` | true | false | false | Enable debug mode |
+| `LOG_LEVEL` | debug | info | error | Logging level |
+| `LOG_FILE` | development.log | production.log | testing.log | Log file location |
+
+### Docker Configurations
+
+- `docker-compose.yml` - Default configuration
+- `docker-compose.dev.yml` - Development with hot reloading
+- `docker-compose.prod.yml` - Production optimized
+
+### Dockerfile Options
+
+- `Dockerfile` - Default development setup
+- `Dockerfile.dev` - Development with Air hot reloading
+- `Dockerfile.prod` - Multi-stage production build
+
 ## 🔧 Features
 
 - 📱 Responsive web interface (thanks to AI styling!)
