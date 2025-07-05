@@ -1,185 +1,0 @@
-Script started on Sat Jul  5 08:09:50 2025
-[0m[49m[39m[27m[24m[K
-
-[2A7[0m[49m[39m[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m─────────────────────────────────────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[?2004h[?25l8[0m[49m[39m[27m[24m[J]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[38;5;31m[49m[39m[27m[24m[1m[7m%[27m[1m[0m                                                                               [0m[49m[39m[27m[24m[K[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?25h[?2004hc[4mc[24m[4mc[24m[90md /Users/sangnguyen/Workspace/Personal/digimon-godesk && go build -o tmp/tes[90mt[90m-build ./cmd/main.go[39m[K[A[17D[K[1B[K[A[3Cl[32ml[39m[32ml[39m[90ms[39m[32ml[32ms[39m[?1l>[?2004l[1B]2;ls -G]1;ls[1m[36massets[39;49m[0m                  Dockerfile.prod         README.md
-[1m[36mcmd[39;49m[0m                     [1m[36mdocs[39;49m[0m                    [1m[36mscripts[39;49m[0m
-docker-compose.dev.yml  go.mod                  [1m[36mstorage[39;49m[0m
-docker-compose.prod.yml go.sum                  [1m[36mtemplates[39;49m[0m
-docker-compose.yml      [1m[36minternal[39;49m[0m                [1m[36mtmp[39;49m[0m
-Dockerfile              LICENSE                 typescript
-Dockerfile.dev          Makefile
-[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hc[4mc[24m[4mc[24m[90md /Users/sangnguyen/Workspace/Personal/digimon-godesk && go build -o tmp/tes[90mt[90m-build ./cmd/main.go[39m[K[A[17D[4mc[39m[4md[24m[24m[32mc[24m[32md[39m[32mc[32md[32m [39m[32mc[32md[39m[39m [39ms[K[1B[K[A[7C[4ms[24m[90mangnguyen[39m[9D[4ms[39m[4mc[24m[39m [39m [39m [39m [39m [39m [39m [39m [8D[90mratch-point[39m[11D[4mc[39m[4mr[24m[4mr[39m[4mi[39m[4mp[39m[4mt[39m[4ms[39m[1m[4m/[0m[24m[39m [39m [39m [39m [39m [4ms[24m[0m[24m [?1l>[?2004l[1B]2;cd scripts]1;cd[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk/scripts]1;..odesk/scripts]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk/scripts\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[38;5;103mW[0m[38;5;103m[48;5;236m[48;5;236m[38;5;31m/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[1m[38;5;31m[48;5;236m[38;5;39mscripts[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hs[4ms[24m[4ms[24m[90mcript[39m[4ms[39m[4me[24m[39m [39m [39m [39m [4ms[4me[4mt[24m[24m[32ms[24m[32me[24m[32mt[39m[39ms[39me[39mt
-[0mset                        setopt                   
-set_unicharset_properties  setquota                 
-SetFile                    setregion                
-[Jsetkey                     [Jsetuids.d                [J[4A[0m[27m[24m[0m[39m[49m[3Cset[K[0m[39m[49m[32ms[32me[32mt[39m[32ms[32me[39m[39m [39m[4ms[39m[4me[24m[4ms[24m[24m [4ms[24m[90mcript[39m[24m [39m [39m [39m [39m [39m b[1m[31mb[0m[39m[1m[31mb[0m[39m[90mash setup.sh[39m[12D[1m[31mb[1m[31ma[0m[39m[1m[31mb[1m[31ma[1m[31ms[0m[39m[1m[31ms[1m[31mh[0m[39m[0m[32mb[0m[32ma[0m[32ms[0m[32mh[39m[39m [39ms[39me[39mt[39mu[39mp[39m.[39ms[39mh[8D[4ms[4me[4mt[4mu[4mp[4m.[4ms[4mh[24m[?1l>[?2004l
-[J]2;bash setup.sh]1;bash[0;34m🦕 Digimon GoDesk Environment Setup[0m
-======================================
-Checking requirements...
-[0;32m✅ Go is installed: go version go1.24.2 darwin/arm64[0m
-[0;32m✅ Docker is installed: Docker version 28.3.0, build 38b7060[0m
-[0;32m✅ Make is available[0m
-
-What would you like to do?
-1) Run in Development mode
-2) Run in Production mode
-3) Run Tests
-4) Just setup environment files
-5) Exit
-
-Enter your choice (1-5): 1
-Setting up development environment...
-[0;31m❌ Environment file .env.development not found![0m
-[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk/scripts]1;..odesk/scripts]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk/scripts\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[38;5;103mW[0m[38;5;103m[48;5;236m[48;5;236m[38;5;31m/[38;5;103mP[0m[38;5;103m[48;5;236m[48;5;236m[38;5;31m/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[1m[38;5;31m[48;5;236m[38;5;39mscripts[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;160m 1[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m х[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m [0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m[0m[38;5;160m[48;5;236m[48;5;236m[38;5;248m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;248m 8s[0m[38;5;248m[48;5;236m[48;5;236m[38;5;248m[0m[38;5;248m[48;5;236m[48;5;236m[38;5;248m [0m[38;5;248m[48;5;236m[48;5;236m[38;5;248m[0m[38;5;248m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hm[1m[31mm[0m[39m[1m[31mm[0m[39m[90make stop[39m[8D[1m[31mm[1m[31ma[0m[39m[1m[31mm[1m[31ma[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32mm[0m[32ma[0m[32mk[0m[32me[39m[32me[32m [39m[32me[39m[39m [39md[39m [39m [39m [90mev[39m[39me[39mv-bg[?1l>[?2004l
-]2;make dev-bg]1;makemake: *** No rule to make target `dev-bg'.  Stop.
-[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk/scripts]1;..odesk/scripts]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk/scripts\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[38;5;103mW[0m[38;5;103m[48;5;236m[48;5;236m[38;5;31m/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/[1m[38;5;31m[48;5;236m[38;5;39mscripts[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m─────[0m[38;5;240m[48;5;236m[38;5;160m 2[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m х[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m [0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m[0m[38;5;160m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hc[1m[31mc[0m[39m[1m[31mc[0m[39m[90md scripts[39m[9D[1m[31mc[1m[31md[0m[39m[0m[32mc[0m[32md[39m[32mc[32md[32m [39m[32mc[32md[39m[39m [39m.[39m [39m [39m [39m [39m [39m [4m.[24m[90m.[39m[4m.[39m[4m.[24m[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hm[1m[31mm[0m[39m[1m[31mm[0m[39m[90make dev-bg[39m[10D[1m[31mm[1m[31ma[0m[39m[1m[31mm[1m[31ma[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32mm[0m[32ma[0m[32mk[0m[32me[39m[32me[32m [39m[32me[39m[39m [39md[4md[24m[4md[39m[4me[24m[24md[24me[39mv[39m-[39mb[39mg[?1l>[?2004l
-]2;make dev-bg]1;makeStarting development environment in background...
-docker-compose -f docker-compose.dev.yml up --build -d
-[33mWARN[0m[0000] /Users/sangnguyen/Workspace/Personal/digimon-godesk/docker-compose.dev.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
-[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                         
- => [internal] load local bake definitions                                 0.0s
-[?25h[1A[1A[0G[?25l[+] Building 0.1s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.0s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.2s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.3s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.5s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.6s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.8s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      0.9s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.2s (2/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m => [internal] load metadata for docker.io/library/golang:1.23-alpine      1.1s
-[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.3s (3/3)                                                         
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m[34m => [internal] load metadata for docker.io/library/golang:1.23-alpine      1.2s
-[0m[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (13/13)                                                       
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m[34m => [internal] load metadata for docker.io/library/golang:1.23-alpine      1.2s
-[0m[34m => [internal] load .dockerignore                                          0.0s
-[0m[34m => => transferring context: 73B                                           0.0s
-[0m[34m => [1/8] FROM docker.io/library/golang:1.23-alpine@sha256:9a425d78a8257f  0.0s
-[0m[34m => [internal] load build context                                          0.0s
-[0m[34m => => transferring context: 20.82kB                                       0.0s
-[0m[34m => CACHED [2/8] WORKDIR /app                                              0.0s
-[0m[34m => CACHED [3/8] RUN apk add --no-cache git curl                           0.0s
-[0m[34m => CACHED [4/8] RUN go install github.com/cosmtrek/air@v1.51.0            0.0s
-[0m[34m => CACHED [5/8] COPY go.mod go.sum ./                                     0.0s
-[0m[34m => CACHED [6/8] RUN go mod download                                       0.0s
-[0m[34m => [7/8] COPY . .                                                         0.0s
-[0m[34m => [8/8] RUN mkdir -p storage/logs                                        0.1s
-[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.5s (15/15) FINISHED                                              
-[34m => [internal] load local bake definitions                                 0.0s
-[0m[34m => => reading from stdin 419B                                             0.0s
-[0m[34m => [internal] load build definition from Dockerfile.dev                   0.0s
-[0m[34m => => transferring dockerfile: 559B                                       0.0s
-[0m[34m => [internal] load metadata for docker.io/library/golang:1.23-alpine      1.2s
-[0m[34m => [internal] load .dockerignore                                          0.0s
-[0m[34m => => transferring context: 73B                                           0.0s
-[0m[34m => [1/8] FROM docker.io/library/golang:1.23-alpine@sha256:9a425d78a8257f  0.0s
-[0m[34m => [internal] load build context                                          0.0s
-[0m[34m => => transferring context: 20.82kB                                       0.0s
-[0m[34m => CACHED [2/8] WORKDIR /app                                              0.0s
-[0m[34m => CACHED [3/8] RUN apk add --no-cache git curl                           0.0s
-[0m[34m => CACHED [4/8] RUN go install github.com/cosmtrek/air@v1.51.0            0.0s
-[0m[34m => CACHED [5/8] COPY go.mod go.sum ./                                     0.0s
-[0m[34m => CACHED [6/8] RUN go mod download                                       0.0s
-[0m[34m => [7/8] COPY . .                                                         0.0s
-[0m[34m => [8/8] RUN mkdir -p storage/logs                                        0.1s
-[0m[34m => exporting to image                                                     0.0s
-[0m[34m => => exporting layers                                                    0.0s
-[0m[34m => => writing image sha256:b386c2c253cbe117fd02554164eefe109ba77a298a5c9  0.0s
-[0m[34m => => naming to docker.io/library/digimon-godesk-app-dev                  0.0s
-[0m[34m => resolving provenance for metadata file                                 0.0s
-[0m[?25h[1A[1B[0G[?25l[+] Running 1/2
- [32m✔[0m app-dev                       [32mBuilt[0m                                     [34m0.0s [0m
- [33m⠋[0m Container digimon-godesk-dev  Recreat...                                [34m0.0s [0m
-[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
- [32m✔[0m app-dev                       [32mBuilt[0m                                     [34m0.0s [0m
- [33m⠙[0m Container digimon-godesk-dev  Startin...                                [34m0.1s [0m
-[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
- [32m✔[0m app-dev                       [32mBuilt[0m                                     [34m0.0s [0m
- [32m✔[0m Container digimon-godesk-dev  [32mStarted[0m                                   [34m0.2s [0m
-[?25h[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hd[32md[39m[32md[39m[90mocker compose down[39m[18D[32md[32mo[39m[33md[33mo[39m[33md[33mo[33mc[39m[39m[4md[39m[4mo[39m[4mc[24m[4mc[39m[4mk[24m[24m[1m[31md[24m[1m[31mo[24m[1m[31mc[24m[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[1m[31me[1m[31mr[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[0m[32mr[39m[32mr[32m [39m[32mr[39m[39m [39mc[4mc[24m[4mc[39m[4mo[24m[24mc[24mo[39mm[39mp[39mo[39ms[39me[39m [39md[4md[24m[4md[39m[4mo[24m[4mo[39m[4mw[24m[24md[24mo[24mw[39mn[?1l>[?2004l
-]2;docker compose down]1;docker[33mWARN[0m[0000] /Users/sangnguyen/Workspace/Personal/digimon-godesk/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
-[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hm[1m[31mm[0m[39m[1m[31mm[0m[39m[90make dev-bg[39m[10D[1m[31mm[1m[31ma[0m[39m[1m[31mm[1m[31ma[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32mm[0m[32ma[0m[32mk[0m[32me[39m[32me[32m [39m[32me[39m[39m [39ms[39m [39m [39m [39m [39m [4ms[24m[90mtop[39m[4ms[39m[4mt[24m[4mt[39m[4mo[24m[4mo[39m[4mp[24m[24ms[24mt[24mo[24mp[?1l>[?2004l
-]2;make stop]1;makemake: *** No rule to make target `stop'.  Stop.
-[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m─────[0m[38;5;240m[48;5;236m[38;5;160m 2[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m х[0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m [0m[38;5;160m[48;5;236m[48;5;236m[38;5;160m[0m[38;5;160m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004hm[1m[31mm[0m[39m[1m[31mm[0m[39m[90make stop[39m[8D[1m[31mm[1m[31ma[0m[39m[1m[31mm[1m[31ma[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32mm[0m[32ma[0m[32mk[0m[32me[39m[32me[32m [39m[32me[39m[39m [39ms[4ms[24m[4ms[39m[4mt[24m[4mt[39m[4mo[24m[4mo[39m[4mp[24m[24ms[24mt[24mo[24mp-e dev[?1l>[?2004l
-]2;make stop-dev]1;makedocker-compose -f docker-compose.dev.yml down
-[33mWARN[0m[0000] /Users/sangnguyen/Workspace/Personal/digimon-godesk/docker-compose.dev.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
-[1A[1B[0G[?25l[+] Running 0/1
- [33m⠋[0m Container digimon-godesk-dev  Stoppin...                                [34m0.1s [0m
-[?25h[1A[1A[0G[?25l[34m[+] Running 1/2[0m
- [32m✔[0m Container digimon-godesk-dev            [32mRemoved[0m                         [34m0.2s [0m
- [33m⠋[0m Network digimon-godesk_dgd-dev-network  Removing                        [34m0.0s [0m
-[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
- [32m✔[0m Container digimon-godesk-dev            [32mRemoved[0m                         [34m0.2s [0m
- [33m⠙[0m Network digimon-godesk_dgd-dev-network  Removing                        [34m0.1s [0m
-[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
- [32m✔[0m Container digimon-godesk-dev            [32mRemoved[0m                         [34m0.2s [0m
- [32m✔[0m Network digimon-godesk_dgd-dev-network  [32mRemoved[0m                         [34m0.2s [0m
-[?25h[1m[7m%[27m[1m[0m                                                                                ]2;sangnguyen@Sangs-MacBook-Pro-2:~/Workspace/Personal/digimon-godesk]1;..igimon-godesk]7;file://Sangs-MacBook-Pro-2.local/Users/sangnguyen/Workspace/Personal/digimon-godesk\[0m[27m[24m[J[0m[49m[39m
-[A[38;5;240m╭─[0m[38;5;240m[48;5;236m[38;5;31m [1m[38;5;31m[48;5;236m[38;5;39m~[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m/Workspace/Personal/[1m[38;5;31m[48;5;236m[38;5;39mdigimon-godesk[0m[38;5;39m[48;5;236m[48;5;236m[38;5;31m[0m[38;5;31m[48;5;236m[48;5;236m[38;5;31m [0m[38;5;31m[48;5;236m[48;5;236m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;178m [38;5;76mdevelop [38;5;76m*1 [38;5;178m!7 [38;5;39m?11[0m[38;5;39m[48;5;236m[48;5;236m[38;5;178m [0m[38;5;178m[48;5;236m[49m[38;5;236m[0m[38;5;236m[49m[39m[38;5;240m───────[0m[38;5;240m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m✔[0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m [0m[38;5;70m[48;5;236m[48;5;236m[38;5;70m[0m[38;5;70m[48;5;236m[48;5;236m[38;5;37m[38;5;244m│[0m[38;5;244m[48;5;236m[48;5;236m[38;5;37m base[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m Py[0m[38;5;37m[48;5;236m[48;5;236m[38;5;37m [0m[38;5;37m[48;5;236m[49m[39m
-[0m[49m[39m[38;5;240m╰─[0m[38;5;240m[49m[39m[0m[49m[39m [0m[49m[39m[K[?1h=[?2004h
