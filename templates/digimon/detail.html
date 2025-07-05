@@ -125,7 +125,7 @@
                 <h2>Prior Evolutions</h2>
                 <div class="evolution-grid">
                     {{range .PriorEvolutions}}
-                        <a href="/digimon/{{.Digimon}}" class="evolution-card">
+                        <a href="/digimon/{{.ID}}" class="evolution-card">
                             {{if .Image}}
                                 <img src="{{.Image}}" alt="{{.Digimon}}" loading="lazy">
                             {{end}}
@@ -145,7 +145,7 @@
                 <h2>Next Evolutions</h2>
                 <div class="evolution-grid">
                     {{range .NextEvolutions}}
-                        <a href="/digimon/{{.Digimon}}" class="evolution-card">
+                        <a href="/digimon/{{.ID}}" class="evolution-card">
                             {{if .Image}}
                                 <img src="{{.Image}}" alt="{{.Digimon}}" loading="lazy">
                             {{end}}
